@@ -67,7 +67,7 @@ bool Window::isMouseButtonPressed(unsigned int button) const {
   return m_MouseButtons[button];
 }
 
-void Window::getMousePositionCallback(double &x, double &y) const {
+void Window::getMousePosition(double &x, double &y) const {
   x = mx;
   y = my;
 }

@@ -33,7 +33,7 @@ public:
 
   bool isKeyPressed(unsigned int keycode) const;
   bool isMouseButtonPressed(unsigned int button) const;
-  void getMousePositionCallback(double &x, double &y) const;
+  void getMousePosition(double &x, double &y) const;
 
 private:
   bool init();
