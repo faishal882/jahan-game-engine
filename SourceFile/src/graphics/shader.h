@@ -27,7 +27,7 @@ public:
   void setUniform4f(const GLchar *name, const maths::vec4 &vector);
   void setUniformMat4(const GLchar *name, const maths::mat4 &matrix);
 
-  void enbale() const;
+  void enable() const;
   void disable() const;
 
 private:

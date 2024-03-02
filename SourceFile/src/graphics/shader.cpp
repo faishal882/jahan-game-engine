@@ -84,7 +84,7 @@ void Shader::setUniformMat4(const GLchar *name, const maths::mat4 &matrix) {
   glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, matrix.elements);
 }
 
-void Shader::enbale() const { glUseProgram(m_ShaderID); }
+void Shader::enable() const { glUseProgram(m_ShaderID); }
 
 void Shader::disable() const { glUseProgram(0); }
 } // namespace graphics

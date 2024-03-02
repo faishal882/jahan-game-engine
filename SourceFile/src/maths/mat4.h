@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cstring>
+
 #include "maths_func.h"
 #include "vec3.h"
 #include "vec4.h"
@@ -7,10 +9,7 @@
 namespace sparky {
 namespace maths {
 
-float toRadians(float degrees);
-
 struct mat4 {
-
   union {
     float elements[4 * 4];
     vec4 columns[4];
@@ -18,6 +17,12 @@ struct mat4 {
 
   mat4();
   mat4(float diagonal);
+
+  vec4 getColumn(int index) {
+    index *= 4;
+    return vec4(elements[index], elements[index + 1], elements[index + 2],
+                elements[index + 3]);
+  }
 
   static mat4 identity();
 
@@ -33,5 +38,6 @@ struct mat4 {
   static mat4 rotation(float angle, const vec3 &axis);
   static mat4 scale(const vec3 &scale);
 };
+
 } // namespace maths
 } // namespace sparky

@@ -2,6 +2,7 @@
 
 #include "buffers/indexbuffer.h"
 #include "renderer2d.h"
+#include <cstddef>
 
 namespace sparky {
 namespace graphics {
