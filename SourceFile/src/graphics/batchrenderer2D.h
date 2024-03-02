@@ -1,6 +1,7 @@
 #pragma once
 
 #include "buffers/indexbuffer.h"
+#include "renderable2d.h"
 #include "renderer2d.h"
 #include <cstddef>
 
